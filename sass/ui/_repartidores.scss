@@ -1,0 +1,37 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.repartidores{
+    padding: 40px 0;
+    .repartidores__heading{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .repartidores__grid{
+        @include m.grid(2,20px);
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .repartidores__contenido{
+            margin-top: 20px;
+
+            .repartidores__texto{
+                margin-bottom: 60px;
+                font-size: 20px;
+                font-weight: 300;
+
+                &:nth-child(2){
+                    margin-bottom: 30px;
+                }
+            }
+
+            .repartidores__enlace{
+                @include m.boton(v.$rojo,v.$blanco)
+            }
+        }
+    }
+}

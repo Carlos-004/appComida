@@ -1,0 +1,36 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.pasos{
+    margin-top: 50px;
+
+    .pasos__contenido{
+        background-color: v.$rojo;
+        margin-top: -10px;
+
+        .pasos__heading{
+            text-align: center;
+            color: v.$blanco;
+            font-size: 28px;
+            .pasos__heading--descripcion{
+                display: block;
+                font-size: 16px;
+            }
+        }
+
+        .pasos__grid{
+            @include m.grid(3,20px);
+            @include m.telefono{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .pasos__paso{
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: scale(1.1) rotate(-10deg);
+                }
+            }
+        }
+    }
+}

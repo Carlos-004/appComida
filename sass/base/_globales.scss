@@ -1,0 +1,41 @@
+@use './variables' as v; 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+body {
+    font-family: v.$fuente_principal;
+    font-size: 16px;
+}
+
+p {
+    color: v.$negro;
+    font-size: 20px;
+}
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0 0 v.$separacion  0 ;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 32px;
+}

@@ -1,0 +1,63 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.descargar{
+    background-color: v.$gris-Claro;
+    padding: 40px 0;
+
+    .descargar__grid {
+        @include m.gridFr(1fr,2fr,60px);
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+        @include m.tablet{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .descargar__imagen{
+            transition: transform 0.3s ease;
+                &:hover {
+                    transform: scale(1.1) rotate(-10deg);
+                }
+        }
+    }
+}
+
+.tiendas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .tiendas__heading{
+        margin-bottom: 10px;
+        color: v.$gris;
+        text-align: center;
+    }
+    .tiendas__texto{
+        text-align: center;
+    }
+}
+.tiendas__grid{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    place-content: center;
+
+    .tiendas__enlace{
+
+        img{
+            width: 320px;
+            @include m.telefono{
+                width: 100%;
+            }
+            transition: transform 0.3s ease;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

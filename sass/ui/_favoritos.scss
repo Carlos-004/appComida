@@ -1,0 +1,53 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.favoritos{
+    margin-top: 40px;
+    padding: 40px 0;
+    background-color: v.$gris-Claro;
+
+    .favoritos__heading{
+        text-align: center;
+    }
+    .favoritos__grid {
+        @include m.grid(2,20px);
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.favorito{
+    background-color: v.$blanco;
+    padding: 20px;
+    border-radius: 10px;
+
+    .favorito__grid{
+        @include m.gridFr(1fr,3fr,20px);
+        place-items: center;
+
+        .favorito__imagen{
+            img{
+                width: 100px;
+            }
+        }
+
+        .favorito__contenido{
+            img{
+                width: 150px;
+            }
+            .favorito__nombre{
+                margin-bottom: 10px;
+                color: v.$rojo;
+                font-size: 24px;
+            }
+            .favorito__descripcion{
+                font-size: 18px;
+                @include m.telefono{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
